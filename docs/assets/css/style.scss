@@ -1,0 +1,205 @@
+---
+---
+
+@import "{{site.theme}}";
+:root {
+  /* 텍스트 & 배경 */
+  --c-text:                 #111;
+  --c-bg:                   #fdfdfd;
+
+  /* 링크 */
+  --c-link:                 #2a7ae2;
+  --c-link-visited:         #1756a9;
+  --c-link-hover:           #111;
+
+  /* 경계 & 보조색 */
+  --c-border:               #e8e8e8;
+  --c-muted:                #828282;
+
+  /* Table */
+  --c-table-row:            #f7f7f7;
+  --c-table-header:         #f0f0f0;
+  --c-table-header-border:  #c9c9c9;
+
+  /* 코드 하이라이트 */
+  --c-code-bg:              #eef;
+  --c-highlight-bg:         #fff;
+
+  font-size: 87.5%;         // 14px / 16px
+
+  /* 필요하다면 제목 계열도 살짝 줄이기 */
+  h1 { font-size: 2.25rem; }   // 원래 2.625rem → 약 -14%
+  h2 { font-size: 1.875rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ------------------------------------------------------------
+   2. 다크 모드 변수 오버라이드
+   ------------------------------------------------------------ */
+[data-theme="dark"],
+:root.dark {
+  
+  --c-text:                 #fdfdfd;
+  --c-bg:                   #1c1b22;
+
+  --c-link:                 #fdfdfd;
+  --c-link-visited:         #fdfdfd;
+  --c-link-hover:           #ffffff;
+
+  --c-border:               #3b3b47;
+  --c-muted:                #9e9e9e;
+
+  --c-table-row:            #26262e;
+  --c-table-header:         #2f2f38;
+  --c-table-header-border:  #454552;
+
+  --c-code-bg:              #2a2a32;
+  --c-highlight-bg:         #2a2a32;
+
+  font-size: 87.5%;         // 14px / 16px
+
+  /* 필요하다면 제목 계열도 살짝 줄이기 */
+  h1 { font-size: 2.25rem; }   // 원래 2.625rem → 약 -14%
+  h2 { font-size: 1.875rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 시스템 다크 모드 선호 시 자동 적용 (수동 토글보다 낮은 우선순위) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --c-text:                 #e8e6e3;
+    --c-bg:                   #1c1b22;
+
+    --c-link:                 #fdfdfd;
+    --c-link-visited:         #fdfdfd;
+    --c-link-hover:           #ffffff;
+
+    --c-border:               #3b3b47;
+    --c-muted:                #9e9e9e;
+
+    --c-table-row:            #26262e;
+    --c-table-header:         #2f2f38;
+    --c-table-header-border:  #454552;
+
+    --c-code-bg:              #2a2a32;
+    --c-highlight-bg:         #2a2a32;
+  }
+}
+
+/* ------------------------------------------------------------
+   3. Minima 기본 스타일 오버라이드 (색상 변수 적용)
+   ------------------------------------------------------------ */
+body {
+  color: var(--c-text);
+  background-color: var(--c-bg);
+}
+
+.post-link {
+  color: var(--c-text);
+  font-size: 16px;
+}
+
+/* 링크 */
+a {
+  color: var(--c-link);
+}
+a:visited {
+  color: var(--c-link-visited);
+}
+a:hover {
+  color: var(--c-link-hover);
+}
+
+/* 블록 인용 */
+blockquote {
+  color: var(--c-muted);
+  border-left: 4px solid var(--c-border);
+}
+
+/* 코드 */
+pre,
+code {
+  border: 1px solid var(--c-border);
+  background-color: var(--c-code-bg);
+}
+
+/* 표 */
+table {
+  color: var(--c-text);
+  border: 1px solid var(--c-border);
+}
+table tr:nth-child(even) {
+  background-color: var(--c-table-row);
+}
+table th {
+  background-color: var(--c-table-header);
+  border: 1px solid var(--c-border);
+  border-bottom-color: var(--c-table-header-border);
+}
+table td {
+  border: 1px solid var(--c-border);
+}
+
+/* 헤더 & 내비 */
+.site-header {
+  border-top: 5px solid var(--c-text);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.site-title,
+.site-title:visited {
+  color: var(--c-text);
+  
+}
+
+.site-nav .page-link {
+  color: var(--c-text);
+  font-size: 16px;
+}
+
+.site-nav {
+  background-color: var(--c-bg);
+  border: 1px solid var(--c-border);
+}
+.site-nav .menu-icon > svg {
+  fill: var(--c-text);
+}
+
+/* 푸터 */
+.site-footer {
+  border-top: 1px solid var(--c-border);
+}
+
+.footer-col-wrapper {
+  color: var(--c-muted);
+}
+
+/* 아이콘 */
+.svg-icon {
+  fill: var(--c-muted);
+}
+
+/* 하이라이트 */
+.highlight {
+  background: var(--c-highlight-bg);
+}
+.highlighter-rouge .highlight {
+  background: var(--c-code-bg);
+}
+
+.highlight .c,
+.highlight .cm,
+.highlight .c1 {
+  color: var(--c-muted);
+}
+
+
+/* ------------------------------------------------------------
+   4. 기타 필요한 선택자 덮어쓰기 (필요시 추가)
+   ------------------------------------------------------------ */
+// 예: .btn, .alert 등 커스텀 컴포넌트가 있다면 여기 추가.
+
