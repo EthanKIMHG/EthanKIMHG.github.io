@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Plug'n'Play (PnP)"
+date:   2025-08-03 00:00:00 +0900
+categories: jekyll update
+---
 # Plug'n'Play (PnP)
 
 **What it is:**

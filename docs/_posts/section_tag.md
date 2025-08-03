@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "HTML <section> Tag"
+date:   2025-08-03 00:00:00 +0900
+categories: jekyll update
+---
 # HTML `<section>` Tag
 
 The HTML `<section>` element is a semantic HTML5 tag used to group related content. It represents a standalone section of a document, which is typically identified by a heading.

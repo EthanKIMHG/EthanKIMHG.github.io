@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Media Format Strategy: Main and Sub Versions (Fonts, Images, Videos)"
+date:   2025-08-03 00:00:00 +0900
+categories: jekyll update
+---
 # Media Format Strategy: Main and Sub Versions (Fonts, Images, Videos)
 
 This topic emphasizes a crucial best practice in web development: always preparing multiple versions (main and sub/fallback) of media assets like fonts, images, and videos. This strategy ensures optimal performance, broad compatibility, and a robust user experience across diverse devices, browsers, and network conditions.

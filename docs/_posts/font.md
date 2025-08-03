@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Fonts in Web Development"
+date:   2025-08-03 00:00:00 +0900
+categories: jekyll update
+---
 # Fonts in Web Development
 
 Fonts are a critical aspect of web design, significantly impacting readability, aesthetics, and user experience. Understanding how to use and manage fonts effectively is essential for frontend developers.

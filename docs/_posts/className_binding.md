@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "className Binding"
+date:   2025-08-03 00:00:00 +0900
+categories: jekyll update
+---
 # className Binding
 
 "className binding" refers to the dynamic application of CSS classes to HTML or component elements based on certain conditions or data. This is a very common pattern in modern frontend development, especially with JavaScript frameworks like React, Vue, and Angular, where the UI is reactive to data changes.

@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Packaging ESLint (Creating and Distributing ESLint Configurations/Plugins)"
+date:   2025-08-03 00:00:00 +0900
+categories: jekyll update
+---
 # Packaging ESLint (Creating and Distributing ESLint Configurations/Plugins)
 
 "Packaging ESLint" generally refers to the process of creating and distributing reusable ESLint configurations, plugins, or shareable configs. This is useful for maintaining consistent code quality across multiple projects or within an organization, without having to copy-paste `.eslintrc` files.

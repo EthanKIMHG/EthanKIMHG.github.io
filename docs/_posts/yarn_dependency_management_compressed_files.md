@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Yarn's Dependency Management: Compressed Files (Zip Archives)"
+date:   2025-08-03 00:00:00 +0900
+categories: jekyll update
+---
 # Yarn's Dependency Management: Compressed Files (Zip Archives)
 
 This topic focuses on a key aspect of Yarn Berry's (Yarn 2+) dependency management strategy: the use of compressed files, specifically zip archives, to store and manage packages. This approach is a fundamental part of how Yarn Berry achieves its performance and efficiency gains, especially in conjunction with Plug'n'Play (PnP).

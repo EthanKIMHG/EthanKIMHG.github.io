@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Component Logic: Handling Loading and Error States (Combined vs. Separate)"
+date:   2025-08-03 00:00:00 +0900
+categories: jekyll update
+---
 # Component Logic: Handling Loading and Error States (Combined vs. Separate)
 
 When fetching asynchronous data in a frontend application, managing the loading and error states is crucial for a good user experience. There are generally two main approaches to structuring component logic for this: combining the handling of loading and error states within a single component, or separating them into distinct components or concerns.
@@ -86,7 +92,7 @@ This approach advocates for separating the concerns of data fetching, loading UI
 
 **Cons:**
 *   **More Boilerplate (initially):** Might require creating more files or abstracting logic into custom hooks/HOCs.
-*   **Can be Over-engineered for Simple Cases:** For very small, isolated components, the overhead might not be worth it.
+*   **Can be Over-engineered for Simple Cases:** For very small, one-off components, the overhead might not be worth it.
 
 **Example (React - Separate using a Custom Hook):**
 

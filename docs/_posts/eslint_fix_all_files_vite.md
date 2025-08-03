@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "ESLint: Fixing All Files in a Vite Project"
+date:   2025-08-03 00:00:00 +0900
+categories: jekyll update
+---
 # ESLint: Fixing All Files in a Vite Project
 
 This topic explains how to use ESLint to automatically fix linting issues across all files in a project, with a specific focus on projects built with Vite.

@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "HTML <video> Tag Options (Attributes)"
+date:   2025-08-03 00:00:00 +0900
+categories: jekyll update
+---
 # HTML `<video>` Tag Options (Attributes)
 
 The HTML `<video>` tag is used to embed video content into a web page. It supports a variety of attributes that control how the video is played, displayed, and loaded. Understanding these options is crucial for providing a good user experience and optimizing performance.
@@ -31,7 +37,6 @@ Here are the most common and important attributes for the `<video>` tag:
 5.  **`muted`**
     *   **Purpose:** Specifies that the audio output of the video should be muted.
     *   **Usage:** A boolean attribute. If present, video is muted.
-    *   **Note:** Often used in conjunction with `autoplay` to bypass browser autoplay restrictions.
     *   **Example:** `<video autoplay muted></video>`
 
 6.  **`poster`**

@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Yarn vs. npm: Installation Inefficiencies"
+date:   2025-08-03 00:00:00 +0900
+categories: jekyll update
+---
 # Yarn vs. npm: Installation Inefficiencies
 
 This topic focuses on the historical inefficiencies of `npm` (Node Package Manager) compared to `yarn` (Yet Another Resource Negotiator), particularly regarding package installation.

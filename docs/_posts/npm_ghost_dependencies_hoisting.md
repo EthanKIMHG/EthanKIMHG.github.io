@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "npm Ghost Dependencies and Hoisting"
+date:   2025-08-03 00:00:00 +0900
+categories: jekyll update
+---
 # npm Ghost Dependencies and Hoisting
 
 This topic delves into two related concepts in the npm ecosystem: "ghost dependencies" (also known as phantom dependencies) and "hoisting." Both are consequences of how npm (and other package managers like Yarn Classic) manage the `node_modules` directory structure.
