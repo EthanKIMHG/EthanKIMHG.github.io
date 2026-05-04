@@ -3,6 +3,7 @@ layout: post
 title:  "Yarn's Dependency Management: Compressed Files (Zip Archives)"
 date:   2025-08-03 00:00:00 +0900
 categories: jekyll update
+tags: [package-manager, yarn, pnp]
 ---
 # Yarn's Dependency Management: Compressed Files (Zip Archives)
 

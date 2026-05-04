@@ -3,6 +3,7 @@ layout: post
 title:  "Reset CSS (Reset Stylesheets)"
 date:   2025-08-03 00:00:00 +0900
 categories: jekyll update
+tags: [css]
 ---
 # Reset CSS (Reset Stylesheets)
 

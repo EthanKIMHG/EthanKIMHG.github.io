@@ -3,6 +3,7 @@ layout: post
 title:  "ESLint: Fixing All Files in a Vite Project"
 date:   2025-08-03 00:00:00 +0900
 categories: jekyll update
+tags: [eslint, vite]
 ---
 # ESLint: Fixing All Files in a Vite Project
 

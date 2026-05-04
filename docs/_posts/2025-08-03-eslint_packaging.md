@@ -3,6 +3,7 @@ layout: post
 title:  "Packaging ESLint (Creating and Distributing ESLint Configurations/Plugins)"
 date:   2025-08-03 00:00:00 +0900
 categories: jekyll update
+tags: [eslint, tooling]
 ---
 # Packaging ESLint (Creating and Distributing ESLint Configurations/Plugins)
 

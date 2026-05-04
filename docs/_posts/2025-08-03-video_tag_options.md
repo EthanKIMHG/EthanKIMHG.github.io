@@ -3,6 +3,7 @@ layout: post
 title:  "HTML <video> Tag Options (Attributes)"
 date:   2025-08-03 00:00:00 +0900
 categories: jekyll update
+tags: [html, media]
 ---
 # HTML `<video>` Tag Options (Attributes)
 

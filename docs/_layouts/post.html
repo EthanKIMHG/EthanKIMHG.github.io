@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="post-detail">
+  <header class="post-detail-header">
+    <a class="back-link" href="{{ '/posts/' | relative_url }}">posts</a>
+    <h1>{{ page.title | escape }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</time>
+      {% assign page_tags = page.tags | default: page.categories %}
+      {% for tag in page_tags %}
+        <a class="link-tag" href="{{ '/posts/' | relative_url }}#tag-{{ tag | slugify }}">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>

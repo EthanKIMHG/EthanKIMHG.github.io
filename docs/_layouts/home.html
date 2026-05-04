@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<div class="posts-page">
+  <section class="tag-cloud" aria-labelledby="tag-heading">
+    <h2 id="tag-heading">tags:</h2>
+    <ul>
+      {% assign sorted_tags = site.tags | sort %}
+      {% for tag in sorted_tags %}
+        <li>
+          <a class="link-tag" id="tag-{{ tag[0] | slugify }}" href="#tag-{{ tag[0] | slugify }}" data-filter-tag="{{ tag[0] | escape }}">
+            #{{ tag[0] }} ({{ tag[1].size }})
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  <div class="post-groups">
+    {% for year in posts_by_year %}
+      <section class="post-year" aria-labelledby="year-{{ year.name }}">
+        <h2 id="year-{{ year.name }}">{{ year.name }}</h2>
+        <ul class="post-list">
+          {% for post in year.items %}
+            {% assign post_tags = post.tags | default: post.categories %}
+            <li class="post-item" data-search="{{ post.title | downcase | escape }} {{ post_tags | join: ' ' | downcase | escape }}">
+              <a class="post-row" href="{{ post.url | relative_url }}">
+                <span class="post-date">
+                  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d" }}</time>
+                </span>
+                <span class="post-title">{{ post.title | escape }}</span>
+              </a>
+              {% if post_tags.size > 0 %}
+                <div class="post-tags">
+                  {% for tag in post_tags %}
+                    <a class="link-tag" href="#tag-{{ tag | slugify }}" data-filter-tag="{{ tag | escape }}">#{{ tag }}</a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+  </div>
+</div>

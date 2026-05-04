@@ -18,18 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 개발 창고
+title: Ethan Kim
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  개발관련 글을 모아놓은 곳입니다.
+  Frontend / Web3 Engineer. React, TypeScript, security, operations, and Web3 infrastructure notes.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ethankim
-github_username:  EthanKIMHG
-repository : EthanKIMHG/EthanKIMHG.github.io
+github_username: EthanKIMHG
+repository: EthanKIMHG/EthanKIMHG.github.io
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
 
@@ -41,7 +40,8 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - _posts/portfolio.md
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
