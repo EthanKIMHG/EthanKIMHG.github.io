@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Obol Network"
+date:   2026-03-02 00:00:00 +0900
+categories: jekyll update
+tags: [obol, charon, eth2, beacon]
+---
 # Obol Network
 
 # 기술 아키텍처

@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Charon Core Workflow (Duty → Scheduler → Fetcher → UnsignedData)"
+date:   2026-03-01 00:00:00 +0900
+categories: jekyll update
+tags: [obol, charon, eth2, beacon]
+---
 # Charon Core Workflow 정리 (Duty → Scheduler → Fetcher → UnsignedData)
 
 ```json

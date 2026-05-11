@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Charon Core Workflow2 (Consensus → DutyDB → ValidatorAPI → ParSig → SigAgg → Broadcast)"
+date:   2026-03-01 00:00:00 +0900
+categories: jekyll update
+tags: [obol, charon, eth2, beacon, validator]
+---
 # Charon Core Workflow 정리2 (Consensus → DutyDB → ValidatorAPI → ParSig → SigAgg → Broadcast)
 
 ```json
