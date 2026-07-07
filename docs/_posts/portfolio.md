@@ -119,7 +119,7 @@ Ethereum Validator, Obol DVT, Charon, DKG, Threshold BLS, Web3Signer, AWS Secret
 Next.js 15, React 19, TypeScript, Zustand, TanStack Query, Turborepo, Go, Fiber, PostgreSQL(Supabase), Redis, Playwright, GitHub Actions, Fly.io, Vercel
 
 **Link**  
-[d4d.tech][https://d4d.tech]
+[d4d.tech](https://d4d.tech)
 
 ---
 
@@ -208,7 +208,7 @@ JWT, HttpOnly Cookie, Silent Refresh, RTK Query, Axios Interceptor, ErrorBoundar
 
 ### 2. 제약 있는 환경에서도 배포 가능한 구조를 만듭니다
 
-폐쇄망, 온프레미스, AWS EC2, 베어메탈 환경에서 Docker Multi-stage Build, Nginx path-based routing, HTTPS 구성을 통해 여러 서비스를 안정적으로 배포했습니다.
+폐쇄망, 온프레미스, AWS EC2, 베어메탈 환경에서 Docker Multi-stage Build부터 서버 하드닝·IaC까지 인프라 계층을 직접 구성하며 여러 서비스를 안정적으로 배포했습니다.
 
 **What I did**
 
@@ -217,9 +217,10 @@ JWT, HttpOnly Cookie, Silent Refresh, RTK Query, Axios Interceptor, ErrorBoundar
 - 여러 서비스를 하나의 Nginx 컨테이너에서 `/holder`, `/issuer`, `/issuer-admin`, `/admin` path 기준으로 서빙했습니다.
 - SPA 새로고침 시 404가 발생하지 않도록 각 path별 `try_files` 설정을 구성했습니다.
 - 운영 서버에서 `docker load → docker compose up`으로 재현 가능한 배포 흐름을 만들었습니다.
+- 4대 베어메탈 서버는 Ansible role 13종으로 SSH 하드닝, UFW, RAID, LUKS, vRack 사설망까지 코드화해 동일한 기준으로 멱등하게 수렴시켰습니다.
 
 **Keywords**  
-Docker, Multi-stage Build, Nginx, Closed Network, Path-based Routing, SPA Routing, Immutable Infrastructure
+Docker, Multi-stage Build, Nginx, Closed Network, Path-based Routing, SPA Routing, Ansible, Infrastructure as Code, Bare Metal
 
 ---
 
@@ -271,6 +272,22 @@ RTK Query, TanStack Query, Redux Toolkit, Zustand, Cache Invalidation, Session S
 
 **Keywords**  
 ESLint, Flat Config, import.meta.glob, React Router Data API, React Hook Form, Zod, sonner
+
+---
+
+### 6. 위험 자산을 다루는 시스템은 승인·격리 구조로 설계합니다
+
+Ethereum 밸리데이터 운영처럼 자산과 slash risk가 걸린 시스템에서는, 얼마나 많이 자동화했는지보다 무엇을 자동화하지 않았는지가 더 중요하다고 생각합니다.
+
+**What I did**
+
+- validator key share를 노드별로 분산 적재하고, AWS IAM 유저와 SourceIp 조건으로 접근을 격리해 한 노드가 침해되어도 서명 임계값에 도달하지 못하도록 설계했습니다.
+- withdrawal 권한을 EOA가 아니라 Ledger 하드웨어 지갑 기반 Safe multisig로 구성해, 단일 키 유출이 곧 자금 유출로 이어지지 않도록 했습니다.
+- 상태 수집·검증·배포 수렴은 Ansible로 자동화하되, deposit·withdrawal·signer 교체 같은 고위험 작업은 승인과 기록을 거치도록 자동화와 승인의 경계를 분리했습니다.
+- 모든 변경을 Git 커밋과 형상관리대장에 연결해, 누가 언제 무엇을 왜 바꿨는지 사후에 추적 가능하게 만들었습니다.
+
+**Keywords**  
+Key Custody, Threshold Signing, IAM Isolation, Safe Multisig, Approval Workflow, Configuration Management
 
 ---
 
